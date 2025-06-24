@@ -37,8 +37,8 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  padding-top: 10rem;
+  min-height: 100vh;
+  padding-top: 12rem;
   text-align: center;
 }
 .home-img img {
@@ -61,6 +61,7 @@ nav a:hover {
 .home-content p {
   font-size: 1.4rem;
   max-width: 600px;
+  padding: 0 1rem;
 }
 .btn {
   margin-top: 2rem;
@@ -77,11 +78,11 @@ nav a:hover {
   background-color: #af4a4a;
   color: black;
 }
-/* Responsive for smaller screens */
+
+/* ✅ Responsive for smaller screens */
 @media (max-width: 768px) {
   .home {
-    flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 
   .home-img img {
@@ -91,7 +92,7 @@ nav a:hover {
   }
 
   .home-content h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .home-content h3 {
@@ -100,7 +101,6 @@ nav a:hover {
 
   .home-content p {
     font-size: 1.2rem;
-    padding: 0 1rem;
   }
 
   .btn {
@@ -115,8 +115,7 @@ nav a:hover {
   }
 
   nav a {
-    margin-left: 1rem;
+    margin: 0.5rem;
     font-size: 1.2rem;
   }
 }
-
