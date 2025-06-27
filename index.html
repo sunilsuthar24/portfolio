@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sunil's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  
-  <!-- ✅ AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
@@ -16,91 +14,101 @@
   <header data-aos="fade-down">
     <a href="#" class="logo">Sunil</a>
     <nav>
-      <a href="#" class="active">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Skills</a>
-      <a href="#">Education</a>
-      <a href="#">Experience</a>
-      <a href="#">Contact</a>
+      <a href="#home" class="active">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- Home Section -->
-  <section class="home" data-aos="fade-up">
+  <section class="home" id="home" data-aos="fade-up">
     <div class="home-img">
       <img src="sunil5.jpg" alt="Sunil's Photo" />
     </div>
-
     <div class="home-content">
       <h1>Hi, it's <span class="white-text">Sunil</span></h1>
-      <h3 class="typing-text">
-        <span class="white-text">I'm a </span><span id="typed-text"></span><span id="cursor">|</span>
-      </h3>
-
+      <h3 class="typing-text"><span class="white-text">I'm a </span><span id="typed-text"></span><span id="cursor">|</span></h3>
       <p>
         I am a passionate and skilled web developer with experience in building responsive, user-friendly websites and web applications.
       </p>
-
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/sunil-suthar-04862a35b"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/sunilsuthar24"><i class="fab fa-github"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
-
       <a href="#" class="btn">Hire me</a>
     </div>
   </section>
 
-  <!-- About Me Section -->
-  <section class="about" data-aos="fade-right">
-    <h2>About Me</h2>
-    <p>
-      Hi, I'm <strong>Sunil Suthar</strong>, a passionate Web Developer from Rajasthan, India. I specialize in creating modern, responsive, and user-friendly websites.<br><br>
-      I'm currently pursuing my B.Tech from Vardhaman College and learning technologies like <strong>HTML, CSS, JavaScript, React, and Next.js</strong>.
-    </p>
+  <!-- Skills Section -->
+  <section class="skills" id="skills" data-aos="fade-right">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3 / Tailwind CSS</li>
+      <li>JavaScript</li>
+      <li>React.js</li>
+      <li>Next.js</li>
+      <li>Git & GitHub</li>
+      <li>Responsive Web Design</li>
+    </ul>
   </section>
 
-  <!-- Projects Section -->
-  <section class="projects" data-aos="fade-left">
-    <h2>Projects</h2>
-
-    <div class="project-item" data-aos="fade-up">
-      <h3>Responsive Portfolio Website</h3>
-      <p>A personal portfolio built with HTML, CSS, and JavaScript — fully responsive with typing effect and social links.</p>
+  <!-- Education Section -->
+  <section class="education" id="education" data-aos="fade-up">
+    <h2>Education</h2>
+    <div class="edu-item">
+      <h3>B.Tech – Vardhaman College of Engineering, Hyderabad</h3>
+      <p>CGPA: 7.0</p>
+      <span>2021 – Present</span>
     </div>
+    <div class="edu-item">
+      <h3>12th – Vignan Junior College, Hyderabad</h3>
+      <p>Percentage: 74%</p>
+      <span>2020</span>
+    </div>
+    <div class="edu-item">
+      <h3>10th – Krishnaveni High School, Hyderabad</h3>
+      <p>Percentage: 93%</p>
+      <span>2018</span>
+    </div>
+  </section>
 
-    <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+  <!-- Experience Section -->
+  <section class="experience" id="experience" data-aos="fade-left">
+    <h2>Experience</h2>
+    <div class="exp-item">
+      <h3>Freelance Portfolio Projects</h3>
+      <p>Designed personal and client portfolio websites using HTML, CSS, and JavaScript with focus on responsive UI/UX.</p>
+    </div>
+    <div class="exp-item">
       <h3>To-Do App</h3>
-      <p>A task tracker built with JavaScript that lets users manage daily tasks. Includes dark mode and local storage.</p>
+      <p>Created a JavaScript-based task manager with dark mode and local storage support.</p>
     </div>
-
-    <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+    <div class="exp-item">
       <h3>Weather App</h3>
-      <p>Live weather app using OpenWeather API with search by city and beautiful icons.</p>
+      <p>Fetched live weather using OpenWeather API with location-based city search and responsive layout.</p>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" data-aos="zoom-in">
+  <section class="contact" id="contact" data-aos="zoom-in">
     <h2>Contact Me</h2>
     <p>If you're interested in working together or just want to connect, feel free to drop me an email.</p>
     <a href="mailto:sunilsuthar24@gmail.com" class="btn">Send Email</a>
   </section>
 
-  <!-- Typing Animation Script -->
+  <!-- Typing + AOS Scripts -->
   <script>
     const words = ["Web Developer", "Frontend Developer", "App Designer", "Backend Developer"];
-    let i = 0;
-    let j = 0;
-    let currentWord = "";
-    let isDeleting = false;
-    const speed = 100;
-    const wait = 1500;
+    let i = 0, j = 0, currentWord = "", isDeleting = false;
+    const speed = 100, wait = 1500;
 
     function type() {
       const span = document.getElementById("typed-text");
-
       if (i < words.length) {
         if (!isDeleting && j <= words[i].length) {
           currentWord = words[i].substring(0, j++);
@@ -119,22 +127,15 @@
     }
 
     document.addEventListener("DOMContentLoaded", type);
-
-    // Blinking cursor
     setInterval(() => {
       const cursor = document.getElementById("cursor");
       cursor.style.visibility = cursor.style.visibility === "hidden" ? "visible" : "hidden";
     }, 500);
   </script>
 
-  <!-- ✅ AOS Script Init -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  </script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
 
 </body>
 </html>
+
