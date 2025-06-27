@@ -88,10 +88,6 @@ nav a:hover {
   font-weight: bold;
 }
 
-.white-text {
-  color: white;
-}
-
 #cursor {
   font-weight: 600;
 }
@@ -144,7 +140,7 @@ nav a:hover {
   box-shadow: 0 0 15px #af4a4a;
 }
 
-/* Common section styling */
+/* Sections */
 .skills, .education, .experience, .contact {
   padding: 5rem 2rem;
   text-align: center;
@@ -178,7 +174,7 @@ nav a:hover {
   background: #1c1c1c;
   padding: 2rem;
   border-radius: 8px;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
   max-width: 800px;
   text-align: left;
   color: #ccc;
@@ -195,6 +191,7 @@ nav a:hover {
   color: #888;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .home-flex {
     flex-direction: column;
