@@ -176,20 +176,20 @@ nav a.active {
   }
 }
 
-/* Responsive */
+/* ✅ Responsive Fix for Samsung A54 & Other Mobiles */
 @media (max-width: 768px) {
   .home {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
-    gap: 3rem;
+    padding: 5rem 2rem;
+    gap: 4rem;
     text-align: center;
   }
 
   .home-img img {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     margin: 0 auto;
     box-shadow: 0 0 15px #af4a4a;
   }
@@ -197,29 +197,29 @@ nav a.active {
   .home-content {
     max-width: 100%;
     width: 100%;
-    text-align: center;
+    padding: 0 1rem;
   }
 
   .home-content h1 {
-    font-size: 3rem;
-    line-height: 1.2;
+    font-size: 2.6rem;
+    line-height: 1.3;
   }
 
   .home-content h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
     color: #af4a4a;
   }
 
   .home-content p {
     font-size: 1.4rem;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
   }
 
   .btn {
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     font-size: 1.4rem;
-    padding: 0.8rem 2.2rem;
+    padding: 0.9rem 2.4rem;
   }
 
   .social-icons {
@@ -231,11 +231,11 @@ nav a.active {
   nav {
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
 
   nav a {
-    margin: 0.6rem;
+    margin: 0.8rem;
     font-size: 1.4rem;
   }
 }
