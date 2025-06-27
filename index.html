@@ -1,32 +1,188 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sunil Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <a href="#" class="logo">Sunil</a>
-    <nav>
-      <a href="#" class="active">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Skills</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-  <section class="home">
-    <div class="home-img">
-      <img src="sunil5.jpg" alt="Sunil's Photo" />
-    </div>
-    <div class="home-content">
-      <h1>Hi, I'm <span>Sunil</span></h1>
-      <h3 class="typing-text">I'm a Web Developer</h3>
-      <p>Web developer with passion and skills in HTML, CSS, JavaScript & more.</p>
-      <a href="#" class="btn">Hire me</a>
-    </div>
-  </section>
-</body>
-</html>
+body {
+  background-color: black;
+  color: white;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 8%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 100;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 2.8rem;
+  color: #af4a4a;
+  font-weight: bold;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #af4a4a;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 14rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+.home-img img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px #af4a4a;
+  margin-bottom: 2rem;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.home-content h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #af4a4a;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  max-width: 500px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+/* Button */
+.btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background-color: #161616;
+  color: #af4a4a;
+  border: 2px solid #af4a4a;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #af4a4a;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #af4a4a;
+  font-size: 2rem;
+  color: #af4a4a;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #af4a4a;
+  color: black;
+  transform: scale(1.2);
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 5%;
+  }
+
+  nav a {
+    font-size: 1.4rem;
+    margin: 0.4rem;
+  }
+
+  .home-img img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .home-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .home-content p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.4rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .social-icons a {
+    width: 42px;
+    height: 42px;
+    font-size: 1.8rem;
+  }
+}
