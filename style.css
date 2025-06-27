@@ -14,7 +14,6 @@ html {
 }
 
 body {
-  width: 100%;
   background-color: black;
   color: white;
   overflow-x: hidden;
@@ -27,7 +26,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 5%;
+  padding: 1.5rem 5%;
   background-color: black;
   display: flex;
   flex-wrap: wrap;
@@ -54,15 +53,14 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  text-align: center;
 }
 
 nav a {
   color: white;
   font-size: 1.6rem;
   font-weight: 600;
-  border-bottom: 2px solid transparent;
   transition: 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 
 nav a:hover,
@@ -78,6 +76,7 @@ nav a.active {
   align-items: center;
   flex-wrap: wrap;
   padding-top: 14rem;
+  padding-bottom: 4rem;
   gap: 5rem;
   text-align: center;
 }
@@ -88,11 +87,12 @@ nav a.active {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 20px #af4a4a;
+  display: block;
 }
 
 .home-content {
   max-width: 600px;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .home-content h1 {
@@ -186,14 +186,12 @@ nav a.active {
   box-shadow: 0 0 20px #af4a4a;
 }
 
-/* ✅ Mobile Responsive Fix — Samsung A54 & Others */
+/* Responsive */
 @media (max-width: 768px) {
   .home {
     flex-direction: column;
-    align-items: center;
-    padding: 10rem 2rem 4rem; /* increased top padding to prevent image cut */
-    gap: 4rem;
-    text-align: center;
+    padding-top: 10rem;
+    gap: 3rem;
   }
 
   .home-img img {
@@ -211,7 +209,6 @@ nav a.active {
 
   .home-content p {
     font-size: 1.4rem;
-    padding: 0 1rem;
   }
 
   .btn {
