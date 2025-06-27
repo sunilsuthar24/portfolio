@@ -214,3 +214,15 @@ nav a.active {
     font-size: 1.4rem;
   }
 }
+#typed-text::after {
+  content: "|";
+  color: #af4a4a;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
