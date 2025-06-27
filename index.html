@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Sunil's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -25,12 +25,12 @@
   <!-- Home Section -->
   <section class="home">
     <div class="home-img">
-      <img src="sunil5.jpg" alt="Sunil's Photo" />
+      <img src="sunil5.jpeg" alt="Sunil's Photo" />
     </div>
 
     <div class="home-content">
       <h1>Hi, I'm <span>Sunil</span></h1>
-      <h3 class="typing-text"><span>I'm a Web Developer</span></h3>
+      <h3 class="typing-text">I'm a <span id="typed-text"></span></h3>
       <p>
         I am Sunil, a passionate and skilled web developer with experience in building responsive, user-friendly websites and web applications.
       </p>
@@ -45,6 +45,39 @@
       <a href="#" class="btn">Hire me</a>
     </div>
   </section>
+
+  <!-- ✅ Typing Animation Script -->
+  <script>
+    const words = ["Web Developer", "Frontend Developer", "App Designer", "Backend Developer"];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
+    const speed = 100;
+    const wait = 1500;
+
+    function type() {
+      const span = document.getElementById("typed-text");
+
+      if (i < words.length) {
+        if (!isDeleting && j <= words[i].length) {
+          currentWord = words[i].substring(0, j++);
+          span.textContent = currentWord;
+          setTimeout(type, speed);
+        } else if (isDeleting && j >= 0) {
+          currentWord = words[i].substring(0, j--);
+          span.textContent = currentWord;
+          setTimeout(type, speed / 2);
+        } else {
+          isDeleting = !isDeleting;
+          if (!isDeleting) i = (i + 1) % words.length;
+          setTimeout(type, wait);
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
 
 </body>
 </html>
