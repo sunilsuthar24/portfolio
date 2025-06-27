@@ -179,10 +179,69 @@ nav a.active {
   transform: scale(1.05);
   box-shadow: 0 0 20px #af4a4a;
 }
+
 .white-text {
   color: white;
 }
 
+/* Skills, Education, Experience, Contact */
+.skills, .education, .experience, .contact {
+  padding: 6rem 10%;
+  background-color: #111;
+  text-align: center;
+}
+
+.skills h2, .education h2, .experience h2, .contact h2 {
+  font-size: 3rem;
+  color: #af4a4a;
+  margin-bottom: 2rem;
+}
+
+/* Skills List */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.skills-list li {
+  background-color: #1c1c1c;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.4rem;
+  box-shadow: 0 0 8px rgba(175, 74, 74, 0.3);
+}
+
+/* Education + Experience Items */
+.edu-item, .exp-item {
+  margin-bottom: 2rem;
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #ccc;
+  box-shadow: 0 0 10px rgba(175, 74, 74, 0.2);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.edu-item h3, .exp-item h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.edu-item span {
+  font-size: 1.3rem;
+  color: #888;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -201,10 +260,6 @@ nav a.active {
     font-size: 2.8rem;
   }
 
-  .home-content h3 {
-    font-size: 1.8rem;
-  }
-
   .home-content p {
     font-size: 1.4rem;
   }
@@ -217,44 +272,13 @@ nav a.active {
   nav a {
     font-size: 1.4rem;
   }
+
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edu-item, .exp-item {
+    text-align: center;
+  }
 }
-/* About, Projects, Contact Section Styles */
-.about, .projects, .contact {
-  padding: 6rem 10%;
-  background-color: #111;
-  text-align: center;
-}
-
-.about h2, .projects h2, .contact h2 {
-  font-size: 3rem;
-  color: #af4a4a;
-  margin-bottom: 2rem;
-}
-
-.about p, .projects p, .contact p {
-  font-size: 1.6rem;
-  line-height: 1.8;
-  color: #ccc;
-}
-
-.project-item {
-  margin-bottom: 2rem;
-  background-color: #1c1c1c;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(175, 74, 74, 0.2);
-}
-
-.project-item h3 {
-  color: white;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.contact .btn {
-  margin-top: 2rem;
-}
-
-
-
-
