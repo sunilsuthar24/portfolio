@@ -18,6 +18,7 @@ body {
   background-color: black;
   color: white;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Header */
@@ -26,7 +27,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem 8%;
+  padding: 1rem 5%;
   background-color: black;
   display: flex;
   flex-wrap: wrap;
@@ -185,12 +186,12 @@ nav a.active {
   box-shadow: 0 0 20px #af4a4a;
 }
 
-/* Mobile Responsive */
+/* ✅ Mobile Responsive Fix — Samsung A54 & Others */
 @media (max-width: 768px) {
   .home {
     flex-direction: column;
     align-items: center;
-    padding: 6rem 2rem 4rem;
+    padding: 10rem 2rem 4rem; /* increased top padding to prevent image cut */
     gap: 4rem;
     text-align: center;
   }
