@@ -6,11 +6,14 @@
   <title>Sunil's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- ✅ AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
 
   <!-- Header -->
-  <header>
+  <header data-aos="fade-down">
     <a href="#" class="logo">Sunil</a>
     <nav>
       <a href="#" class="active">Home</a>
@@ -23,14 +26,16 @@
   </header>
 
   <!-- Home Section -->
-  <section class="home">
+  <section class="home" data-aos="fade-up">
     <div class="home-img">
       <img src="sunil5.jpg" alt="Sunil's Photo" />
     </div>
 
     <div class="home-content">
       <h1>Hi, it's <span class="white-text">Sunil</span></h1>
-      <h3 class="typing-text"><span class="white-text">I'm a </span><span id="typed-text"></span><span id="cursor">|</span></h3>
+      <h3 class="typing-text">
+        <span class="white-text">I'm a </span><span id="typed-text"></span><span id="cursor">|</span>
+      </h3>
 
       <p>
         I am a passionate and skilled web developer with experience in building responsive, user-friendly websites and web applications.
@@ -48,7 +53,7 @@
   </section>
 
   <!-- About Me Section -->
-  <section class="about">
+  <section class="about" data-aos="fade-right">
     <h2>About Me</h2>
     <p>
       Hi, I'm <strong>Sunil Suthar</strong>, a passionate Web Developer from Rajasthan, India. I specialize in creating modern, responsive, and user-friendly websites.<br><br>
@@ -57,27 +62,27 @@
   </section>
 
   <!-- Projects Section -->
-  <section class="projects">
+  <section class="projects" data-aos="fade-left">
     <h2>Projects</h2>
 
-    <div class="project-item">
+    <div class="project-item" data-aos="fade-up">
       <h3>Responsive Portfolio Website</h3>
       <p>A personal portfolio built with HTML, CSS, and JavaScript — fully responsive with typing effect and social links.</p>
     </div>
 
-    <div class="project-item">
+    <div class="project-item" data-aos="fade-up" data-aos-delay="100">
       <h3>To-Do App</h3>
       <p>A task tracker built with JavaScript that lets users manage daily tasks. Includes dark mode and local storage.</p>
     </div>
 
-    <div class="project-item">
+    <div class="project-item" data-aos="fade-up" data-aos-delay="200">
       <h3>Weather App</h3>
       <p>Live weather app using OpenWeather API with search by city and beautiful icons.</p>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact">
+  <section class="contact" data-aos="zoom-in">
     <h2>Contact Me</h2>
     <p>If you're interested in working together or just want to connect, feel free to drop me an email.</p>
     <a href="mailto:sunilsuthar24@gmail.com" class="btn">Send Email</a>
@@ -120,6 +125,15 @@
       const cursor = document.getElementById("cursor");
       cursor.style.visibility = cursor.style.visibility === "hidden" ? "visible" : "hidden";
     }, 500);
+  </script>
+
+  <!-- ✅ AOS Script Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
   </script>
 
 </body>
